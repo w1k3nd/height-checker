@@ -1,7 +1,5 @@
-#include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 class Solution {
@@ -9,7 +7,7 @@ public:
     int heightChecker(vector<int>& heights) {
         vector<int> expected = heights;
         sort(expected.begin(), expected.end());
-
+        
         int count = 0;
         for (int i = 0; i < heights.size(); i++) {
             if (heights[i] != expected[i]) {
@@ -19,10 +17,3 @@ public:
         return count;
     }
 };
-
-int main() {
-    Solution sol;
-    vector<int> test = {1, 1, 4, 2, 1, 3};
-    cout << sol.heightChecker(test) << endl;
-    return 0;
-}
